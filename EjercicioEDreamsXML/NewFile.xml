@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ed:vuelo xmlns:ed="http://www.edreams.es/reservas"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="http://www.edreams.es/reservas eDreams.xsd">
+	<trayecto>
+		<origen>Palma de Mallorca</origen>
+		<destino did="MAD">Madrid</destino>
+	</trayecto>
+	<fechas>
+		<salida>2016-03-01</salida>
+		<regreso>2016-03-06</regreso>
+	</fechas>
+	<pasajeros>
+		<adultos>2</adultos>
+		<infantes>1</infantes>
+		<bebes>0</bebes>
+	</pasajeros>
+</ed:vuelo>

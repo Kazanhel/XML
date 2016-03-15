@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema	elementFormDefault="unqualified"
+		targetNamespace="http://www.edreams.es/reservas"
+		xmlns:ed="http://www.edreams.es/reservas"
+		xmlns:xs="http://www.w3.org/2001/XMLSchema">		
+
+	<xs:import namespace="http://www.aena.es"
+		schemaLocation="aenaSchema.xsd">
+	</xs:import>
+
+<xs:element name="vuelo">
+<xs:complexType>
+		<xs:sequence>
+		
+<!-- TRAYECTO -->
+			<xs:element name="trayecto">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="origen" type="xs:string"/>
+						<xs:element name="destino">
+							<xs:complexType>
+								<xs:simpleContent><!-- contenido simple -->
+									<xs:extension base="xs:string">
+										<xs:attribute name="did" type="xs:string"></xs:attribute>
+									</xs:extension>
+								</xs:simpleContent>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+<!-- FECHAS -->
+			<xs:element name="fechas">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="salida" type="xs:date"/>
+						<xs:element name="regreso" type="xs:date"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+<!-- PASAJEROS -->
+			<xs:element name="pasajeros">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="adultos" type="xs:int"/>
+						<xs:element name="infantes" type="xs:int"/>
+						<xs:element name="bebes" type="xs:int"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			
+		</xs:sequence>
+	</xs:complexType>
+ </xs:element>
+
+</xs:schema>
